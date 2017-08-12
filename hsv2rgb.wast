@@ -1,4 +1,5 @@
 (module
+  (import "math" "fmod" (func $fmod (param f64 f64) (result f64)))
   (memory 1)
   (func $hsv2rgb
     (param $h f32)
@@ -28,13 +29,10 @@
     f32.const 1.0
     ;; modulo
     get_local $hh
-    get_local $hh
-    f32.const 2.0
-    f32.div
-    f32.floor
-    f32.const 2.0
-    f32.mul
-    f32.sub
+    f64.promote/f32
+    f64.const 2.0
+    call $fmod
+    f32.demote/f64
     ;; end of modulo
     f32.const 1.0
     f32.sub

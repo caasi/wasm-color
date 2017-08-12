@@ -1,6 +1,5 @@
-;; wast2wasm --spec ./rgb2hsv.wast -o ./rgb2hsv.json
-;; wasm-interp --spec ./rgb2hsv.json
 (module
+  (import "math" "fmod" (func $fmod (param f64 f64) (result f64)))
   (memory 1)
   (func $rgb2hsv
     (param $r f32)
@@ -67,16 +66,10 @@
         f32.sub
         get_local $c
         f32.div
-        set_local $t
-        ;; modulo
-        get_local $t
-        get_local $t
-        f32.const 6.0
-        f32.div
-        f32.floor
-        f32.const 6.0
-        f32.mul
-        f32.sub
+        f64.promote/f32
+        f64.const 6.0
+        call $fmod
+        f32.demote/f64
         set_local $hh
         br 1
       end

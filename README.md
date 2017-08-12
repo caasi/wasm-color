@@ -4,7 +4,8 @@ Learn to code in WebAssembly by doing.
 
 ## ToDo
 
-  * [ ] port [`fmod`](https://git.musl-libc.org/cgit/musl/tree/src/math/fmod.c)
+  * [x] implement `fmod`
+    * port [`fmod`](https://git.musl-libc.org/cgit/musl/tree/src/math/fmod.c)
   * [ ] better `rgb2hsv`, `hsv2rgb`, check https://github.com/tmpvar/hsv2rgb
 
 ## References
