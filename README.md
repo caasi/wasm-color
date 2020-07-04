@@ -1,6 +1,9 @@
 # Color functions in WebAssembly text format
 
-Learn to code in WebAssembly by doing.
+## Development
+
+* build [WABT](https://github.com/WebAssembly/wabt)
+* run `./run.sh`
 
 ## ToDo
 
@@ -24,5 +27,5 @@ Learn to code in WebAssembly by doing.
 ### Examples
 
   * [ukyo/wast-small-starter](https://github.com/ukyo/wast-small-starter)
-  * [WebAssembly/wabt/test](https://github.com/WebAssembly/wabt/tree/master/test)
+  * [Amalgamated WebAssembly Test Suite](https://github.com/webassembly/testsuite)
   * [joshuawarner32/rust-wasm/test](https://github.com/joshuawarner32/rust-wasm/tree/master/test)
